@@ -1,87 +1,133 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    direction: rtl;
-    text-align: right;
-    font-family: 'Arial (Hebrew)', Arial;
-    line-height: 1;
+  direction: rtl;
+  text-align: right;
+  font-family: "Arial (Hebrew)", Arial;
+  line-height: 1;
 }
 
 .container {
-    width: 900px;
-    margin: 0 auto;
-    padding-bottom: 30px;
+  width: 900px;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 div.menu {
-    width: 100%;
-    height: 105px;
-    position: relative;
-    z-index: 100;
-    margin: auto;
-    background-image: linear-gradient(#909090 90%,#aaa);
+  width: 100%;
+  height: 105px;
+  position: relative;
+  z-index: 100;
+  margin: auto;
+  background-image: linear-gradient(#909090 90%, #aaa);
 }
 
-
 div.menu > nav > ul {
-    margin: auto;
-    height: 33px;
-    position: absolute;
-    bottom: 0;
+  margin: auto;
+  height: 33px;
+  position: absolute;
+  bottom: 0;
 }
 
 nav > ul > li {
-    height: 100%;
-    display: block;
-    float: right;   
-    list-style: none; 
+  height: 100%;
+  display: block;
+  float: right;
+  list-style: none;
 }
 
 a.home-logo {
-    width: 17px; 
-    height: 100%;
-    background: url("images/menu_home.png") -17px 0 no-repeat;
+    display: block;
+  width: 17px;
+  height: 100%;
+  background: url("images/menu_home.png") -17px 0 no-repeat;
 }
 
 a.home-logo:hover {
-    background: url("images/menu_home.png") 0 0 no-repeat;
+  background: url("images/menu_home.png") 0 0 no-repeat;
 }
 
 nav > ul > li > a {
-    display: inline-block;
-    font-size: 15px;
-    font-weight: bold;
-    height: 100%;
-    color: #fff;
-    text-decoration: none;
+  /* display: inline-block; */
+  font-size: 15px;
+  font-weight: bold;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
 }
 
 nav > ul > li > a:hover {
-    text-decoration: underline;
-    color:blue;
+  text-decoration: underline;
+  color: #005CA0;
+}
+
+nav > ul > li > a:visited {
+  font-size: 15px;
+  font-weight: bold;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
 }
 
 li.sep {
-    height: 21px;
-    width: 4px;
-    margin: 0 16px;
-    text-align: center;
-    color: #bcbcbc;
+  height: 21px;
+  width: 4px;
+  margin: 0 16px;
+  text-align: center;
+  color: #bcbcbc;
 }
 
 li.sep::after {
-    content: "|";
+  content: "|";
 }
 
 .paz-logo {
-    display: block;
-    width: 142px;
-    height: 93px;
-    float: right;
-    margin-top: -40px;
-    background: url("images/paz_logo.png") 0 0 no-repeat;
+  display: block;
+  width: 142px;
+  height: 93px;
+  float: right;
+  margin-top: -40px;
+  background: url("images/paz_logo.png") 0 0 no-repeat;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  /* background-color: #909090; */
+  background-image: linear-gradient(to top, #909090 85%, #aaa);
+  top: 33px;
+}
+
+.dropdown-content > li {
+  list-style: none;
+  /* float: none; */
+  padding: 0 5px;
+}
+
+.dropdown-content > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown-content > li:hover >a {
+    color: #005CA0;
+    background-color: #bcbcbc;
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
