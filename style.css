@@ -120,6 +120,8 @@ li.sep::after {
   white-space: nowrap;
   text-decoration: none;
   color: #fff;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .dropdown-content > li:hover >a {
