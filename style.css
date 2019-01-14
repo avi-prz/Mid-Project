@@ -15,6 +15,51 @@ body {
   width: 900px;
   margin: 0 auto;
   padding-bottom: 30px;
+  position: relative;
+}
+
+.search {
+  position: relative;
+  top: 50px;
+  left: -680px;
+  display: inline-block;
+  z-index: 300;
+}
+
+a.src-btn {
+  float: left;
+  height: 19px;
+  width: 19px;
+  background: url("images/search_button.png") 0 0 no-repeat;
+}
+
+.input {
+  float: left;
+  background: url("images/search_input.png") 0 0 no-repeat;
+  width: 132px;
+  height: 19px;
+}
+
+.input > input {
+  width: 126px;
+  background: transparent;
+  border: 0 none;
+}
+
+.search > .language {
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 19px;
+  margin-top: 5px;
+}
+
+.search > .language::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 div.menu {
@@ -41,7 +86,7 @@ nav > ul > li {
 }
 
 a.home-logo {
-    display: block;
+  display: block;
   width: 17px;
   height: 100%;
   background: url("images/menu_home.png") -17px 0 no-repeat;
@@ -52,17 +97,11 @@ a.home-logo:hover {
 }
 
 nav > ul > li > a {
-  /* display: inline-block; */
   font-size: 15px;
   font-weight: bold;
   height: 100%;
   color: #fff;
   text-decoration: none;
-}
-
-nav > ul > li > a:hover {
-  text-decoration: underline;
-  color: #005CA0;
 }
 
 nav > ul > li > a:visited {
@@ -101,7 +140,6 @@ li.sep::after {
 .dropdown-content {
   position: absolute;
   display: none;
-  /* background-color: #909090; */
   background-image: linear-gradient(to top, #909090 85%, #aaa);
   top: 33px;
 }
@@ -124,12 +162,15 @@ li.sep::after {
   font-weight: bold;
 }
 
-.dropdown-content > li:hover >a {
-    color: #005CA0;
-    background-color: #bcbcbc;
-    text-decoration: underline;
+.dropdown-content > li:hover {
+  background-color: #bcbcbc;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+a.hover:hover {
+  text-decoration: underline;
+  color: #005ca0;
 }
