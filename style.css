@@ -23,12 +23,11 @@ div.menu {
     position: relative;
     z-index: 100;
     margin: auto;
-    background-color: #909090;    
+    background-image: linear-gradient(#909090 90%,#aaa);
 }
 
 
 div.menu > nav > ul {
-    /* margin-right: 143px; */
     margin: auto;
     height: 33px;
     position: absolute;
@@ -38,11 +37,18 @@ div.menu > nav > ul {
 nav > ul > li {
     height: 100%;
     display: block;
-    float: right;    
+    float: right;   
+    list-style: none; 
 }
 
-img.home-logo {
+a.home-logo {
     width: 17px; 
+    height: 100%;
+    background: url("images/menu_home.png") -17px 0 no-repeat;
+}
+
+a.home-logo:hover {
+    background: url("images/menu_home.png") 0 0 no-repeat;
 }
 
 nav > ul > li > a {
@@ -51,10 +57,31 @@ nav > ul > li > a {
     font-weight: bold;
     height: 100%;
     color: #fff;
+    text-decoration: none;
 }
 
-nav > ul > li:hover {
+nav > ul > li > a:hover {
     text-decoration: underline;
     color:blue;
-    background-color: #bcbcbc;
+}
+
+li.sep {
+    height: 21px;
+    width: 4px;
+    margin: 0 16px;
+    text-align: center;
+    color: #bcbcbc;
+}
+
+li.sep::after {
+    content: "|";
+}
+
+.paz-logo {
+    display: block;
+    width: 142px;
+    height: 93px;
+    float: right;
+    margin-top: -40px;
+    background: url("images/paz_logo.png") 0 0 no-repeat;
 }
