@@ -13,7 +13,6 @@ body {
 
 header {
   width: 100%;
-  /* margin: 0 auto; */
   background-image: linear-gradient(#909090 90%, #aaa);
 }
 
@@ -84,11 +83,9 @@ div.menu {
   position: relative;
   z-index: 100;
   margin: auto;
-  /* background-image: linear-gradient(#909090 90%, #aaa); */
 }
 
 div.menu > nav > ul {
-  /* margin: auto; */
   height: 33px;
   position: absolute;
   bottom: 0;
@@ -162,7 +159,6 @@ li.sep::after {
 
 .dropdown-content > li {
   list-style: none;
-  /* float: none; */
   padding: 0 5px;
 }
 
@@ -188,7 +184,7 @@ li.sep::after {
 
 a.hover:hover {
   text-decoration: underline;
-  color: #005ca0;
+  color: #005ca0 !important;
 }
 
 .main {
@@ -349,7 +345,6 @@ footer {
 }
 
 footer > ul {
-  /* margin: auto; */
   height: 100%;
   color: #fff;
   list-style: none;
@@ -387,9 +382,207 @@ li.sep-min {
   width: 4px;
   margin: 0 5px;
   text-align: center;
-  /* color: #bcbcbc; */
 }
 
 li.sep-min::after {
   content: "|";
+}
+
+.column {
+  display: block;
+  float: right;
+  /* border: solid black 1px; */
+  width: 30%;
+  height: 100%;
+  position: relative;
+}
+
+.column.side-menu {
+  width: 122px;
+  margin-left: 22px;
+}
+
+.column.side-menu > ul {
+  border-top: 1px solid #dedede;
+}
+
+.column.side-menu > ul > li {
+  list-style: none;
+  display: block;
+  width: 122px;
+  min-height: 36px;
+}
+
+.column.side-menu > ul > li > a {
+  display: block;
+  width: 110px;
+  height: 36px;
+  padding-right: 12px;
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 4px;
+  color: #5c5c5c;
+  line-height: 32px;
+  background: url("images/side_menu_sprite.png") no-repeat -122px 0;
+  text-decoration: none;
+}
+
+.column.side-menu > ul > li > a.hover:hover {
+  text-decoration: underline;
+  color: #005ca0;
+}
+
+.column.contact-form {
+  margin-left: 24px;
+  color: #72716d;
+  font-size: 12px;
+  width: 50%;
+}
+
+ul.breadcrumb {
+  display: block;
+  font-size: 12px;
+  color: #5c5c5c;
+  margin-bottom: 25px;
+  list-style: none;
+}
+
+ul.breadcrumb::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+ul.breadcrumb > li {
+  float: right;
+  margin-right: 5px;
+}
+
+ul.breadcrumb li + li:before {
+  content: ">";
+  padding-left: 5px;
+}
+
+ul.breadcrumb > li > a {
+  outline: none;
+  text-decoration: none;
+  color: #5c5c5c;
+}
+
+ul.breadcrumb > li > a:hover {
+  text-decoration: underline;
+  color: #005ca0;
+}
+
+.column.contact-form h1 {
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 1px solid #cbcbcb;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+}
+
+div.form {
+  border-style: solid solid none solid;
+  border-width: 1px;
+  border-color: #cccccc;
+  width: 347px;
+  min-height: 332px;
+  padding: 12px 18px;
+  background: #ffffff;
+  /* background: linear-gradient(top, #ffffff 0%, #f7f7f7 49%, #f7f7f7 51%, #ececec 100%); */
+  background: -webkit-linear-gradient(
+    top,
+    #ffffff 0%,
+    #f7f7f7 49%,
+    #f7f7f7 51%,
+    #ececec 100%
+  );
+  border-top-right-radius: 20px;
+  color: #72716d;
+  font-size: 12px;
+}
+div.form h2 {
+  color: #005ca0;
+  font-weight: bold;
+  font-size: 15px;
+}
+div.form .caption {
+  display: block;
+  color: #6d6d6d;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 5px 0;
+}
+div.form .instructions {
+  color: #72716d;
+  font-size: 12px;
+}
+div.form .fields {
+  width: 245px;
+  margin: 10px auto 0;
+}
+div.form .fields > .line {
+  margin-bottom: 5px;
+  display: block;
+}
+div.form .fields > .line::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+div.form .fields > .line > label {
+  color: #6d6d6d;
+  width: 75px;
+  text-align: right;
+  float: right;
+}
+div.form .fields > .line > input[type="text"] {
+  width: 160px;
+  padding: 3px;
+  border: 1px solid #808992;
+  float: right;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+div.form .fields > .line > textarea {
+  float: right;
+  color: #6d6d6d;
+  width: 235px;
+  height: 100px;
+  padding: 3px;
+  border: 1px solid #808992;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+div.form .fields > a {
+  top: 0;
+  position: relative;
+  height: 21px;
+  float: left;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: "Arial (Hebrew)", Arial;
+  padding-left: 8px;
+}
+div.form .fields > a > span {
+  float: right;
+  height: 100%;
+}
+span.button-right {
+  background: url("images/button_r.png") no-repeat 0 0;
+  width: 6px;
+}
+
+span.button-text {
+  font-size: 14px;
+  color: #fff;
+  background: url("images/button_blue.png") repeat-x 0 0;
+  line-height: 21px;
+  padding: 0 4px;
+}
+span.button-left {
+  background: url("images/button_l.png") no-repeat 0 0;
+  width: 6px;
 }
