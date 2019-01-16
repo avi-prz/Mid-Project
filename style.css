@@ -30,7 +30,8 @@ header {
 }
 
 .search {
-  float: left;
+  position: absolute;
+  left: 0;
   margin-top: 20px;
   margin-left: 10px;
   z-index: 300;
@@ -47,6 +48,7 @@ a.src-btn {
   height: 19px;
   width: 19px;
   background: url("images/search_button.png") 0 0 no-repeat;
+  z-index: 305;
 }
 
 .input {
@@ -60,6 +62,7 @@ a.src-btn {
   width: 126px;
   background: transparent;
   border: 0 none;
+  z-index: 310;
 }
 
 .search > .language {
