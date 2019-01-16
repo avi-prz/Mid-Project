@@ -380,6 +380,10 @@ footer > ul > li > img {
   margin-right: 10px;
 }
 
+footer > ul > li > img.fb-logo {
+  margin-top: -2px;
+}
+
 footer > ul > li > a {
   color: #fff;
   text-decoration: none;
